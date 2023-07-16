@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, 
+        initial-scale=1.0">
+       <title> Lineups!</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="sub6-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+            </nav>
+        
+            <div id="top" class="text-box">
+            <h1>Icebox!</h1>
+            <p>Use lineups to win games!</p>
+            <a href="index.html" class="hero-btn">Go back</a>
+        </div>
+        </section>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            function increaseFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '300%';
+            }
+            function resetFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '31%';
+            }
+        </script>
+
+         <!--------------------------ICEBOX------------------------->
+         <section id="icebox" class="section">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">Icebox</h1>
+                    <p>Lineups for Icebox - TBA</p>
+
+                    <div class="tab-agents">
+                        <p class="tab-links active-link" onclick="opentab('viper6')">VIPER</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="viper6">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h1>Use these lineups in your ranked games!</h1>
+            <a href="#top" class="hero-btn">Go back up</a>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="with=device-width, 
+        initial-scale=1.0">
+        <title> Strats!</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="sub10-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+            </nav>
+        
+            <div id="top" class="text-box">
+            <h1>Strategies!</h1>
+            <p>Use strats to win games!</p>
+            <a href="index.html" class="hero-btn" >Go back!</a>
+        </div>
+        </section>
+
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+        <section id="strats" class="section">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">Strategies</h1>
+                    <p>Strategies for all maps</p>
+
+                    <div class="tab-agents">
+                        <p class="tab-links active-link" onclick="opentab('ascent1')">ASCENT</p>
+                        <p class="tab-links" onclick="opentab('bind1')">BIND</p>
+                        <p class="tab-links" onclick="opentab('breeze1')">BREEZE</p>
+                        <p class="tab-links" onclick="opentab('fracture1')">FRACTURE</p>
+                        <p class="tab-links" onclick="opentab('haven1')">HAVEN</p>
+                        <p class="tab-links" onclick="opentab('icebox1')">ICEBOX</p>
+                        <p class="tab-links" onclick="opentab('lotus1')">LOTUS</p>
+                        <p class="tab-links" onclick="opentab('pearl1')">PEARL</p>
+                        <p class="tab-links" onclick="opentab('split1')">SPLIT</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents active-tab" id="ascent1">
+                <ul>
+                    <li><span>Attack</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                            <h3>Attacking B or A with a comp of Phoenix, Brimstone, Sova, KJ, KAYO</h3>
+                            <img src="images/strategies/Ascent.png">
+                            <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                onmouseout="resetFlexBasis(this)"></button>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="bind1">
+                <ul>
+                    <li><span>A - Attack</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                            <h3>Tree/Door</h3>
+                            <img src="images/strategies/split1.png">
+                            <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                onmouseout="resetFlexBasis(this)"></button>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="breeze1">
+                <ul>
+                    <li><span>TBA</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="fracture1">
+                <ul>
+                    <li><span>A - Attack</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                            <h3>Tree/Door</h3>
+                            <img src="images/strategies/split1.png">
+                            <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                onmouseout="resetFlexBasis(this)"></button>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="haven1">
+                <ul>
+                    <li><span>A - Attack</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                            <h3>Tree/Door</h3>
+                            <img src="images/strategies/split1.png">
+                            <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                onmouseout="resetFlexBasis(this)"></button>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="icebox1">
+                <ul>
+                    <li><span>TBA</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="lotus1">
+                <ul>
+                    <li><span>A - Attack</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                            <h3>Tree/Door</h3>
+                            <img src="images/strategies/split1.png">
+                            <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                onmouseout="resetFlexBasis(this)"></button>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="pearl1">
+                <ul>
+                    <li><span>A - Attack</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                            <h3>Tree/Door</h3>
+                            <img src="images/strategies/split1.png">
+                            <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                onmouseout="resetFlexBasis(this)"></button>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="split1">
+                <ul>
+                    <li><span>A - Attack</span>
+                    <div class="agent-row">
+                        <div class="agent-col">
+                            <h3>Tree/Door</h3>
+                            <img src="images/strategies/split1.png">
+                            <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                onmouseout="resetFlexBasis(this)"></button>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h1>Use these strategies in your ranked games!</h1>
+            <a href="#top" class="hero-btn">Go back up</a>
+        </section>
+    </body>
+</html>

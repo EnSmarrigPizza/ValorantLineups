@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, 
+        initial-scale=1.0">
+       <title> Lineups!</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+            </nav>
+
+        <div class="text-box">
+            <h1>Lineups!</h1>
+            <p>Use lineups to win games!</p>
+            <a href="#maps" class="hero-btn">Choose map!</a>
+        </div>
+        </section>
+
+        <!----------------------------SCRIPT-------------------------------->
+        <script>
+            function goToPage(url) {
+                window.location.href = url;
+            }
+            function displayText() {
+                const displayElement = document.getElementById("dText");
+                displayElement.textContent = "You naughty naughty!";
+                
+                setTimeout(function() {
+                displayElement.textContent = "";
+                }, 2000);
+            }
+        </script>
+
+        <!-----------------------------MAPS------------------------------>
+        <section id="maps" class="maps">
+            <h1>All maps</h1>
+
+            <div class="row">
+                <div class="maps-col" onclick="goToPage('ascent.html')">
+                    <img src="images/maps/Ascent.jpg">
+                    <div class="layer">
+                        <h3>Ascent</h3>
+                    </div>
+                </div>
+                <div class="maps-col" onclick="goToPage('bind.html')">
+                    <img src="images/maps/Bind.jpg">
+                    <div class="layer">
+                        <h3>Bind</h3>
+                    </div>
+                </div>
+                <div class="maps-col" onclick="goToPage('breeze.html')">
+                    <img src="images/maps/Breeze.jpg">
+                    <div class="layer">
+                        <h3>Breeze</h3>
+                    </div>
+                </div>
+                <div class="maps-col" onclick="goToPage('fracture.html')">
+                    <img src="images/maps/Fracture.jpg">
+                    <div class="layer">
+                        <h3>Fracture</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row2">
+                <div class="maps-col" onclick="goToPage('haven.html')">
+                    <img src="images/maps/Haven.jpg">
+                    <div class="layer">
+                        <h3>Haven</h3>
+                    </div>
+                </div>
+                <div class="maps-col" onclick="goToPage('icebox.html')">
+                    <img src="images/maps/Icebox.jpg">
+                    <div class="layer">
+                        <h3>Icebox</h3>
+                    </div>
+                </div>
+                <div class="maps-col" onclick="goToPage('lotus.html')">
+                    <img src="images/maps/Lotus.jpg">
+                    <div class="layer">
+                        <h3>Lotus</h3>
+                    </div>
+                </div>
+                <div class="maps-col" onclick="goToPage('pearl.html')">
+                    <img src="images/maps/Pearl.jpg">
+                    <div class="layer">
+                        <h3>Pearl</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row3">
+                <div class="maps-col" onclick="goToPage('split.html')">
+                    <img src="images/maps/Split.jpg">
+                    <div class="layer">
+                        <h3>Split</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------------STRATS--------------------------->
+        <section id="strats" class="strats">
+            <h3>All Strats</h3>
+            <div class="row">
+                <div class="strats-col" onclick="goToPage('strats.html')">
+                    <img class="firstpic" src="images/strats.png">
+                    <img class="secondpic" src="images/strats2.png">
+                </div>
+            </div>  
+
+        </section>
+
+        <!----------------------------------BOOBA--------------------------->
+        <section class="cta2">
+            <button class="custom-button" onclick="displayText()">Grab me</button>
+                <h3 id="dText"></h3>
+            <button class="custom-button2" onclick="displayText()"> Grab me</button>
+                <h3 id="dText"></h3>
+        </section>
+    </body>
+</html>
+

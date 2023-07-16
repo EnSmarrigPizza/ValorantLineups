@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, 
+        initial-scale=1.0">
+       <title> Ascent!</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="sub1-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+            </nav>
+        
+            <div id="top" class="text-box">
+            <h1>Ascent!</h1>
+            <p>Use lineups to win games!</p>
+            <a href="index.html" class="hero-btn" >Go back!</a>
+        </div>
+        </section>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            function increaseFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '300%';
+            }
+            function resetFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '31%';
+            }
+        </script>
+
+        <!--------------------------ASCENT------------------------->
+        <section id="ascent" class="section">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">Ascent</h1>
+                    <p>Lineups for Ascent</p>
+
+                    <div class="tab-agents">
+                        <p class="tab-links active-link" onclick="opentab('kj1')">KJ</p>
+                        <p class="tab-links" onclick="opentab('kayo1')">KAYO</p>
+                        <p class="tab-links" onclick="opentab('sova1')">SOVA</p>
+                        <p class="tab-links" onclick="opentab('brimstone1')">BRIMSTONE</p>
+                        <p class="tab-links" onclick="opentab('phoenix1')">PHOENIX</p>
+                    </div>
+
+                    <!--------------------------KILLJOY------------------------->
+                    <div class="tab-contents active-tab" id="kj1">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Tree/Door</h3>
+                                    <img src="images/ascent/kj/kjA2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Heaven - Jump Throw</h3>
+                                    <img src="images/ascent/kj/kjA3.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Generator</h3>
+                                    <img src="images/ascent/kj/kjA6.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Dice - Jump Throw</h3>
+                                    <img src="images/ascent/kj/kjA7.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Garden</h3>
+                                    <img src="images/ascent/kj/kjA5.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Molly + Ult</h3>
+                                    <img src="images/ascent/kj/kjA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Molly + Ult</h3>
+                                    <img src="images/ascent/kj/kjA4.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Market</h3>
+                                    <img src="images/ascent/kj/kjB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>CT</h3>
+                                    <img src="images/ascent/kj/kjB.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------KAYO------------------------->
+                    <div class="tab-contents" id="kayo1">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Dice</h3>
+                                    <img src="images/ascent/kayo/kayoA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Generator - Crouch Throw</h3>
+                                    <img src="images/ascent/kayo/kayoA2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Hell</h3>
+                                    <img src="images/ascent/kayo/kayoA3.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------SOVA------------------------->
+                    <div class="tab-contents" id="sova1">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>A main - 1 bar</h3>
+                                    <img src="images/ascent/sova/sA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Catwalk - 1 bar</h3>
+                                    <img src="images/ascent/sova/sA2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Retake - 3 bars</h3>
+                                    <img src="images/ascent/sova/sA3.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Site - 3 bars</h3>
+                                    <img src="images/ascent/sova/sB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Boathouse - 3 bars</h3>
+                                    <img src="images/ascent/sova/sB.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Retake - 3 bars</h3>
+                                    <img src="images/ascent/sova/sB3.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------BRIMSTONE------------------------->
+                    <div class="tab-contents" id="brimstone1">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Default</h3>
+                                    <img src="images/ascent/brimstone/bA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Dice</h3>
+                                    <img src="images/ascent/brimstone/bA2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Heaven</h3>
+                                    <img src="images/ascent/brimstone/bA3.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Defense</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>A main</h3>
+                                        <img src="images/ascent/brimstone/bA4.png">
+                                        <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Deny plant</h3>
+                                        <img src="images/ascent/brimstone/bA5.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            <li><span>B - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Default</h3>
+                                    <img src="images/ascent/brimstone/bB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Default</h3>
+                                    <img src="images/ascent/brimstone/bB2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>B main</h3>
+                                    <img src="images/ascent/brimstone/bB3.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Deny plant</h3>
+                                    <img src="images/ascent/brimstone/bB4.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+                    
+                    <!--------------------------PHOENIX------------------------->    
+                    <div class="tab-contents" id="phoenix1">
+                        <ul>
+                            <li><span>A - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>A push - Jump Throw</h3>
+                                    <img src="images/ascent/phoenix/pA2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Deny plant</h3>
+                                    <img src="images/ascent/phoenix/pA3.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Generator</h3>
+                                    <img src="images/ascent/phoenix/pA4.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Logs</h3>
+                                    <img src="images/ascent/phoenix/pB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Deny Orb</h3>
+                                    <img src="images/ascent/phoenix/pB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>B push</h3>
+                                    <img src="images/ascent/phoenix/pB3.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>B main</h3>
+                                    <img src="images/ascent/phoenix/pB4.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+            </div></div></div>
+        </section>
+
+        <section class="cta">
+            <h1>Use these lineups in your ranked games!</h1>
+            <a href="#top" class="hero-btn">Go back up</a>
+        </section>
+    </body>
+</html>

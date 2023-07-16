@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, 
+        initial-scale=1.0">
+       <title> Pearl!</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="sub8-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+            </nav>
+        
+            <div id="top" class="text-box">
+            <h1>Pearl!</h1>
+            <p>Use lineups to win games!</p>
+            <a href="index.html" class="hero-btn">Go back</a>
+        </div>
+        </section>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            function increaseFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '300%';
+            }
+            function resetFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '31%';
+            }
+        </script>
+
+        <!--------------------------PEARL------------------------->
+        <section id="pearl" class="section">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">Pearl</h1>
+                    <p>Lineups for Pearl</p>
+
+                    <div class="tab-agents">
+                        <p class="tab-links active-link" onclick="opentab('kj8')">KJ</p>
+                        <p class="tab-links" onclick="opentab('viper8')">VIPER</p>
+                        <p class="tab-links" onclick="opentab('sage8')">SAGE</p>
+                    </div>
+
+                    <!--------------------------KILLJOY------------------------->
+                    <div class="tab-contents active-tab" id="kj8">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Backsite</h3>
+                                    <img src="images/pearl/kj/kjA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Secret</h3>
+                                    <img src="images/pearl/kj/kjA2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------VIPER------------------------->
+                    <div class="tab-contents" id="viper8">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Backsite</h3>
+                                    <img src="images/pearl/viper/vA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>Mid - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Orb B link</h3>
+                                    <img src="images/pearl/viper/vB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>B link</h3>
+                                    <img src="images/pearl/viper/vB3.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>Mid - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Orb double doors</h3>
+                                    <img src="images/pearl/viper/vMid.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Orb Backhall - (Jump + Throw)</h3>
+                                    <img src="images/pearl/viper/vB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>One-way orb</h3>
+                                    <img src="images/pearl/viper/vB7.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Screen</h3>
+                                    <img src="images/pearl/viper/vB5.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Backhall</h3>
+                                    <img src="images/pearl/viper/vB4.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Deny plant/backhall</h3>
+                                    <img src="images/pearl/viper/vB6.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------SAGE------------------------->
+                    <div class="tab-contents" id="sage8">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Secret</h3>
+                                    <img src="images/pearl/sage/sA2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>A main</h3>
+                                    <img src="images/pearl/sage/sA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Deep A main</h3>
+                                    <img src="images/pearl/sage/sA3.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>Mid - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>B link</h3>
+                                    <img src="images/pearl/sage/sB4.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Backhall</h3>
+                                    <img src="images/pearl/sage/sB3.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Site - Run Throw</h3>
+                                    <img src="images/pearl/sage/sB2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>B long</h3>
+                                    <img src="images/pearl/sage/sB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>B long - Run Jump Throw</h3>
+                                    <img src="images/pearl/sage/sB6.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Deep B long</h3>
+                                    <img src="images/pearl/sage/sB5.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+            </div></div></div>
+        </section>
+
+        <section class="cta">
+            <h1>Use these lineups in your ranked games!</h1>
+            <a href="#top" class="hero-btn">Go back up</a>
+        </section>
+    </body>
+</html>

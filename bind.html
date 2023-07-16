@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, 
+        initial-scale=1.0">
+       <title> Bind!</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="sub2-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+            </nav>
+        
+            <div id="top" class="text-box">
+            <h1>Bind!</h1>
+            <p>Use lineups to win games!</p>
+            <a href="index.html" class="hero-btn">Go back</a>
+        </div>
+        </section>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            function increaseFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '300%'; 
+            }
+            function resetFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '31%';
+            }
+        </script>
+
+        <!--------------------------BIND------------------------->
+        <section id="bind" class="section">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">Bind</h1>
+                    <p>Lineups for Bind</p>
+
+                    <div class="tab-agents">
+                        <p class="tab-links active-link" onclick="opentab('brimstone2')">BRIMSTONE</p>
+                        <p class="tab-links" onclick="opentab('viper2')">VIPER</p>
+                        <p class="tab-links" onclick="opentab('cypher2')">CYPHER</p>
+                        <p class="tab-links" onclick="opentab('yoru2')">YORU</p>
+                    </div>
+
+                    <!--------------------------BRIMSTONE------------------------->
+                    <div class="tab-contents active-tab" id="brimstone2">
+                        <ul>
+                            <li><span>A - Attack - Post plant</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Default</h3>
+                                    <img src="images/bind/brimstone/bA3.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Tripplebox</h3>
+                                    <img src="images/bind/brimstone/bA4.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Outside showers</h3>
+                                    <img src="images/bind/brimstone/bA5.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Tripplebox</h3>
+                                    <img src="images/bind/brimstone/bA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Default</h3>
+                                    <img src="images/bind/brimstone/bA2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Default</h3>
+                                    <img src="images/bind/brimstone/bB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Plant deny from A</h3>
+                                    <img src="images/bind/brimstone/bB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Plant deny</h3>
+                                    <img src="images/bind/brimstone/bB3.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------VIPER------------------------->
+                    <div class="tab-contents" id="viper2">
+                        <ul>
+                            <li><span>A - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Orb Lamps - Jump + Throw</h3>
+                                    <img src="images/bind/viper/vA3.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Orb Lamps</h3>
+                                    <img src="images/bind/viper/vA2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Behind Tripplebox</h3>
+                                    <img src="images/bind/viper/vA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>One-way CT</h3>
+                                    <img src="images/bind/viper/vB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------CYPHER------------------------->
+                    <div class="tab-contents active-tab" id="cypher2">
+                        <ul>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>One-way Showers</h3>
+                                    <img src="images/bind/cypher/cA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Hidden cam outside Hookah</h3>
+                                    <img src="images/bind/cypher/cB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>"Hidden" cam Hookah - Backwards Jump</h3>
+                                    <img src="images/bind/cypher/cB2.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------YORU------------------------->
+                    <div class="tab-contents active-tab" id="yoru2">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Lamps</h3>
+                                    <img src="images/bind/yoru/yA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>B to A</h3>
+                                    <img src="images/bind/yoru/yA2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Cubby</h3>
+                                    <img src="images/bind/yoru/yB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+        </div></div>
+        </section>
+
+        <section class="cta">
+            <h1>Use these lineups in your ranked games!</h1>
+            <a href="#top" class="hero-btn">Go back up</a>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, 
+        initial-scale=1.0">
+       <title> Fracture!</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="sub4-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+            </nav>
+        
+            <div id="top" class="text-box">
+            <h1>Fracture!</h1>
+            <p>Use lineups to win games!</p>
+            <a href="index.html" class="hero-btn">Go back</a>
+        </div>
+        </section>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            function increaseFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '300%';
+            }
+            function resetFlexBasis() {
+                var agentCol = event.target.closest('.agent-col');
+                agentCol.style.flexBasis = '31%';
+            }
+        </script>
+
+        <!--------------------------FRACTURE------------------------->
+        <section id="fracture" class="section">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">Fracture</h1>
+                    <p>Lineups for Fracture</p>
+
+                    <div class="tab-agents">
+                        <p class="tab-links active-link" onclick="opentab('kj4')">KJ</p>
+                        <p class="tab-links" onclick="opentab('kayo4')">KAYO</p>
+                        <p class="tab-links" onclick="opentab('brimstone4')">BRIMSTONE</p>
+                        <p class="tab-links" onclick="opentab('cypher4')">CYPHER</p>
+                        <p class="tab-links" onclick="opentab('yoru4')">YORU</p>
+                    </div>
+
+                    <!--------------------------KILLJOY------------------------->
+                    <div class="tab-contents active-tab" id="kj4">
+                        <ul>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Molly + Ult</h3>
+                                    <img src="images/fracture/kj/kjA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Tower - Jump + Throw</h3>
+                                    <img src="images/fracture/kj/kjB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Molly + Ult - Jump + Throw</h3>
+                                    <img src="images/fracture/kj/kjB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------KAYO------------------------->
+                    <div class="tab-contents" id="kayo4">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Site</h3>
+                                    <img src="images/fracture/kayo/kA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Retake - Crouch Throw</h3>
+                                    <img src="images/fracture/kayo/kA2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Dice</h3>
+                                    <img src="images/fracture/kayo/kB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>B main push</h3>
+                                    <img src="images/fracture/kayo/kB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------BRIMSTONE------------------------->
+                    <div class="tab-contents" id="brimstone4">
+                        <ul>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Deny plant</h3>
+                                    <img src="images/fracture/brimstone/bA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Postplant</h3>
+                                    <img src="images/fracture/brimstone/bB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>Postplant</h3>
+                                    <img src="images/fracture/brimstone/bB3.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense </span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>B main from A</h3>
+                                        <img src="images/fracture/brimstone/bB.png">
+                                        <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------CYPHER------------------------->
+                    <div class="tab-contents" id="cypher4">
+                        <ul>
+                            <li><span>A - Defense</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Cam Spawn - A + Jump + Rope boost</h3>
+                                    <img src="images/fracture/cypher/cA.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>One-way A main</h3>
+                                    <img src="images/fracture/cypher/cA3.png">
+                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                                <div class="agent-col">
+                                    <h3>One-way Sands</h3>
+                                    <img src="images/fracture/cypher/cA2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>One-way postplant</h3>
+                                    <img src="images/fracture/cypher/cB2.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Defense </span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Cam B main + Site + Arcade - Boost then Jump</h3>
+                                    <img src="images/fracture/cypher/cB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                        </ul>
+                    </div>
+
+                    <!--------------------------YORU------------------------->
+                    <div class="tab-contents" id="yoru4">
+                        <ul>
+                            <li><span>A - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Backsite tp</h3>
+                                    <img src="images/fracture/yoru/yA.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                            <li><span>B - Attack</span>
+                            <div class="agent-row">
+                                <div class="agent-col">
+                                    <h3>Tower tp</h3>
+                                    <img src="images/fracture/yoru/yB.png">
+                                    <button class="picture-buttonL" onmouseover="increaseFlexBasis(this)" 
+                                        onmouseout="resetFlexBasis(this)"></button>
+                                </div>
+                            </div></li>
+                </div></div>
+        </section>
+
+        <section class="cta">
+            <h1>Use these lineups in your ranked games!</h1>
+            <a href="#top" class="hero-btn">Go back up</a>
+        </section>
+    </body>
+</html>
