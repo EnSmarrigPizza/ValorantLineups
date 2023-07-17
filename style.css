@@ -57,20 +57,16 @@ nav img{
 }
 
 /*--------------------------------------------*/
-.row{
+.col{
     margin-top: 5%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
-.row2{
+.row{
     margin-top: 0%;
     display: flex;
     justify-content: space-between;
-}
-.row3{
-    margin-top: 0%;
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .maps-col{
     flex-basis: 24%;
@@ -175,11 +171,6 @@ nav img{
     margin: 0 auto;
     padding: 20px;
 }
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 .about-col-1{
     flex-basis: 100%;
 }
@@ -255,15 +246,6 @@ nav img{
     background-color: transparent;
     border: none;
     top: 20px;
-    right: 0%;
-    position: absolute;
-    padding: 135px 236px;
-    border-radius: 15px;
-}
-.picture-buttonL{
-    background-color: transparent;
-    border: none;
-    top: 20px;
     left: 0%;
     position: absolute;
     padding: 135px 236px;
@@ -271,107 +253,61 @@ nav img{
 }
 
 
-
 /*----------------------------MAPS HEADER---------------------------------------*/
 /*---ASCENT--*/
 .sub1-header{
     min-height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(101, 108, 138, 0.7),
-    rgba(101, 108, 138, 0.7)), url(images/maps/Ascent.jpg);
     background-position: left;
     background-size: cover;
     position: relative;
+    background-image: linear-gradient(rgba(101, 108, 138, 0.7),
+    rgba(101, 108, 138, 0.7)), url(images/maps/Ascent.jpg);
 }
 /*---BIND--*/
 .sub2-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Bind.jpg);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 /*---BREEZE--*/
 .sub3-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Breeze.jpg);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 /*---FRACTURE--*/
 .sub4-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Fracture.jpg);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 /*---HAVEN--*/
 .sub5-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Haven.jpg);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 /*---ICEBOX--*/
 .sub6-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Icebox.jpg);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 /*---LOTUS--*/
 .sub7-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Lotus.jpg);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 /*---PEARL--*/
 .sub8-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Pearl.jpg);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 /*---SPLIT--*/
 .sub9-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Split.jpg);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 /*---STRATS--*/
 .sub10-header{
-    min-height: 50vh;
-    width: 100%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/strats2.png);
-    background-position: left;
-    background-size: cover;
-    position: relative;
 }
 
 /*----------------------------FOR LAST SECTION---------------------------------------*/
@@ -396,9 +332,6 @@ nav img{
     width: 50%;
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/GigaViper.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
     padding: 300px 0;
     position: relative;
 }
@@ -417,16 +350,7 @@ nav img{
 .custom-button:hover {
     background-color: #a5f186;
 }
-.custom-button2 {
-    background-color: transparent;
-    color: #fff;
-    border: none;
-    padding: 5px 5px;
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 5px;
-    position: absolute;
-    top: 80%;
+.custom-button2{
     left: 46%;
 }
 .custom-button2:hover {
