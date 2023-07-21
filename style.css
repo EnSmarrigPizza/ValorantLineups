@@ -179,17 +179,26 @@ nav img{
     font-weight: 600;
     color: #000;
 }
+
+
+.tab-sides,
 .tab-agents{
     display: flex;
     margin: 20px 0 30px;
+    cursor: pointer;
 }
+.tab-agents img{
+    max-height: 75px;
+    max-width: 75px;
+}
+.sides-links,
 .tab-links{
     margin-right: 20px;
     font-size: 18px;
     font-weight: 500;
-    cursor: pointer;
     position: relative;
 }
+.sides-links::after,
 .tab-links::after{
     content: '';
     width: 0;
@@ -200,14 +209,20 @@ nav img{
     bottom: -8px;
     transition: 0.5s;
 }
-.tab-links.active-link::after{
+.sides-links.active-link::after, 
+.tab-links.active-link2::after{
     width: 60%;
 }
-.agent-row{
-    margin-top: 0;
-    display: flex;
-    justify-content: space-between;
+.tab-contents, 
+.tab-contents2{
+    display: none;
 }
+.tab-contents.active-tab, 
+.tab-contents2.active-tab2{
+    display: block;
+}
+
+
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
@@ -221,6 +236,11 @@ nav img{
 .tab-contents ul li span{
     color: #f44336;
     font-size: 24px;
+}
+.agent-row{
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
 }
 .agent-col{
     flex-basis: 31%;
@@ -236,12 +256,6 @@ nav img{
     font-size: 18px;
     text-align: center;
 }
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
 .picture-button{
     background-color: transparent;
     border: none;
@@ -251,7 +265,23 @@ nav img{
     padding: 135px 236px;
     border-radius: 15px;
 }
-
+.sides-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #f44336;
+    border: 1px solid #f44336;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    left: 1px;
+    top: 1px;
+}
+.sides-btn:hover{
+    background: #f1e4e3;
+    transition: 1s;
+}
 
 /*----------------------------MAPS HEADER---------------------------------------*/
 /*---ASCENT--*/

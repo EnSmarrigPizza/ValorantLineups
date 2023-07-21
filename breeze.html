@@ -23,19 +23,28 @@
         </section>
 
         <script>
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
+            function openTab(tablinksClass, tabcontentsClass, activeLinkClass, activeTabClass, tabname) {
+                var tablinks = document.getElementsByClassName(tablinksClass);
+                var tabcontents = document.getElementsByClassName(tabcontentsClass);
 
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link")
+                for (var tablink of tablinks) {
+                    tablink.classList.remove(activeLinkClass);
                 }
-                for(tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab")
+
+                for (var tabcontent of tabcontents) {
+                    tabcontent.classList.remove(activeTabClass);
                 }
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
+
+                event.currentTarget.classList.add(activeLinkClass);
+                document.getElementById(tabname).classList.add(activeTabClass);
             }
+            function opentab(tabname) {
+                openTab("sides-links", "tab-contents", "active-link", "active-tab", tabname);
+            }
+            function opentab2(tabname) {
+                openTab("tab-links", "tab-contents2", "active-link2", "active-tab2", tabname);
+            }
+
             function increaseFlexBasis() {
                 var agentCol = event.target.closest('.agent-col');
                 agentCol.style.flexBasis = '300%';
@@ -54,9 +63,11 @@
                     <p>Lineups for Breeze - TBA</p>
 
                     <div class="tab-agents">
-                        <p class="tab-links active-link" onclick="opentab('viper3')">VIPER</p>
+                        <p class="tab-links active-link2" onclick="opentab2('viper3')">
+                            <img src="images/agents/Viper_icon.webp">
+                        </p>
                     </div>
-                    <div class="tab-contents active-tab" id="viper3">
+                    <div class="tab-contents2 active-tab2" id="viper3">
                     </div>
                 </div>
             </div>

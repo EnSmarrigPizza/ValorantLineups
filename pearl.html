@@ -23,19 +23,28 @@
         </section>
 
         <script>
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
+            function openTab(tablinksClass, tabcontentsClass, activeLinkClass, activeTabClass, tabname) {
+                var tablinks = document.getElementsByClassName(tablinksClass);
+                var tabcontents = document.getElementsByClassName(tabcontentsClass);
 
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link")
+                for (var tablink of tablinks) {
+                    tablink.classList.remove(activeLinkClass);
                 }
-                for(tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab")
+
+                for (var tabcontent of tabcontents) {
+                    tabcontent.classList.remove(activeTabClass);
                 }
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
+
+                event.currentTarget.classList.add(activeLinkClass);
+                document.getElementById(tabname).classList.add(activeTabClass);
             }
+            function opentab(tabname) {
+                openTab("sides-links", "tab-contents", "active-link", "active-tab", tabname);
+            }
+            function opentab2(tabname) {
+                openTab("tab-links", "tab-contents2", "active-link2", "active-tab2", tabname);
+            }
+
             function increaseFlexBasis() {
                 var agentCol = event.target.closest('.agent-col');
                 agentCol.style.flexBasis = '300%';
@@ -54,187 +63,226 @@
                     <p>Lineups for Pearl</p>
 
                     <div class="tab-agents">
-                        <p class="tab-links active-link" onclick="opentab('kj8')">KJ</p>
-                        <p class="tab-links" onclick="opentab('viper8')">VIPER</p>
-                        <p class="tab-links" onclick="opentab('sage8')">SAGE</p>
+                        <p class="tab-links active-link2" onclick="opentab2('kj8')">
+                            <img src="images/agents/Killjoy_icon.webp" alt="">
+                        </p>
+                        <p class="tab-links" onclick="opentab2('viper8')">
+                            <img src="images/agents/Viper_icon.webp" alt="">
+                        </p>
+                        <p class="tab-links" onclick="opentab2('sage8')">
+                            <img src="images/agents/Sage_icon.webp" alt="">
+                        </p>
                     </div>
 
                     <!--------------------------KILLJOY------------------------->
-                    <div class="tab-contents active-tab" id="kj8">
-                        <ul>
-                            <li><span>A - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Backsite</h3>
-                                    <img src="images/pearl/kj/kjA.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Secret</h3>
-                                    <img src="images/pearl/kj/kjA2.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                        </ul>
+                    <div class="tab-contents2 active-tab2" id="kj8">
+                        <div class="tab-sides">
+                            <p class="sides-links active-link" onclick="opentab('kjAttack')">ATTACK</p>
+                            <p class="sides-links" onclick="opentab('kjDefense')">DEFENSE</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="kjAttack">
+                            <ul>
+                                <li><span>A - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Backsite</h3>
+                                        <img src="images/pearl/kj/kjA.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Secret</h3>
+                                        <img src="images/pearl/kj/kjA2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="kjDefense">
+                            <ul></ul>
+                        </div>
                     </div>
 
                     <!--------------------------VIPER------------------------->
-                    <div class="tab-contents" id="viper8">
-                        <ul>
-                            <li><span>A - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Backsite</h3>
-                                    <img src="images/pearl/viper/vA.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>Mid - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Orb B link</h3>
-                                    <img src="images/pearl/viper/vB2.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>B link</h3>
-                                    <img src="images/pearl/viper/vB3.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>Mid - Defense</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Orb double doors</h3>
-                                    <img src="images/pearl/viper/vMid.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>B - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Orb Backhall - (Jump + Throw)</h3>
-                                    <img src="images/pearl/viper/vB.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>One-way orb</h3>
-                                    <img src="images/pearl/viper/vB7.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Screen</h3>
-                                    <img src="images/pearl/viper/vB5.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Backhall</h3>
-                                    <img src="images/pearl/viper/vB4.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>B - Defense </span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Deny plant/backhall</h3>
-                                    <img src="images/pearl/viper/vB6.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                        </ul>
+                    <div class="tab-contents2" id="viper8">
+                        <div class="tab-sides">
+                            <p class="sides-links active-link" onclick="opentab('viperAttack')">ATTACK</p>
+                            <p class="sides-links" onclick="opentab('viperDefense')">DEFENSE</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="viperAttack">
+                            <ul>
+                                <li><span>A - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Backsite</h3>
+                                        <img src="images/pearl/viper/vA.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>Mid - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Orb B link</h3>
+                                        <img src="images/pearl/viper/vB2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>B link</h3>
+                                        <img src="images/pearl/viper/vB3.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Orb Backhall - (Jump + Throw)</h3>
+                                        <img src="images/pearl/viper/vB.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>One-way orb</h3>
+                                        <img src="images/pearl/viper/vB7.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Screen</h3>
+                                        <img src="images/pearl/viper/vB5.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Backhall</h3>
+                                        <img src="images/pearl/viper/vB4.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="viperDefense">
+                            <ul>
+                                <li><span>Mid - Defense</span>
+                                    <div class="agent-row">
+                                        <div class="agent-col">
+                                            <h3>Orb double doors</h3>
+                                            <img src="images/pearl/viper/vMid.png">
+                                            <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                                onmouseout="resetFlexBasis(this)"></button>
+                                        </div>
+                                    </div></li>
+                                <li><span>B - Defense </span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Deny plant/backhall</h3>
+                                        <img src="images/pearl/viper/vB6.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!--------------------------SAGE------------------------->
                     <div class="tab-contents" id="sage8">
-                        <ul>
-                            <li><span>A - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Secret</h3>
-                                    <img src="images/pearl/sage/sA2.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>A - Defense</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>A main</h3>
-                                    <img src="images/pearl/sage/sA.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Deep A main</h3>
-                                    <img src="images/pearl/sage/sA3.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>Mid - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>B link</h3>
-                                    <img src="images/pearl/sage/sB4.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>B - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Backhall</h3>
-                                    <img src="images/pearl/sage/sB3.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Site - Run Throw</h3>
-                                    <img src="images/pearl/sage/sB2.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>B - Defense </span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>B long</h3>
-                                    <img src="images/pearl/sage/sB.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>B long - Run Jump Throw</h3>
-                                    <img src="images/pearl/sage/sB6.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Deep B long</h3>
-                                    <img src="images/pearl/sage/sB5.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                        </ul>
-            </div></div></div>
+                        <div class="tab-sides">
+                            <p class="sides-links active-link" onclick="opentab('sageAttack')">ATTACK</p>
+                            <p class="sides-links" onclick="opentab('sageDefense')">DEFENSE</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="sageAttack">
+                            <ul>
+                                <li><span>A - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Secret</h3>
+                                        <img src="images/pearl/sage/sA2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>Mid - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>B link</h3>
+                                        <img src="images/pearl/sage/sB4.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Backhall</h3>
+                                        <img src="images/pearl/sage/sB3.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Site - Run Throw</h3>
+                                        <img src="images/pearl/sage/sB2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="sageDefense">
+                            <ul>
+                                <li><span>A - Defense</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>A main</h3>
+                                        <img src="images/pearl/sage/sA.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Deep A main</h3>
+                                        <img src="images/pearl/sage/sA3.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Defense </span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>B long</h3>
+                                        <img src="images/pearl/sage/sB.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>B long - Run Jump Throw</h3>
+                                        <img src="images/pearl/sage/sB6.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Deep B long</h3>
+                                        <img src="images/pearl/sage/sB5.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div></div>
         </section>
 
         <section class="cta">

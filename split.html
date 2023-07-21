@@ -23,19 +23,28 @@
         </section>
 
         <script>
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
+            function openTab(tablinksClass, tabcontentsClass, activeLinkClass, activeTabClass, tabname) {
+                var tablinks = document.getElementsByClassName(tablinksClass);
+                var tabcontents = document.getElementsByClassName(tabcontentsClass);
 
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link")
+                for (var tablink of tablinks) {
+                    tablink.classList.remove(activeLinkClass);
                 }
-                for(tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab")
+
+                for (var tabcontent of tabcontents) {
+                    tabcontent.classList.remove(activeTabClass);
                 }
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
+
+                event.currentTarget.classList.add(activeLinkClass);
+                document.getElementById(tabname).classList.add(activeTabClass);
             }
+            function opentab(tabname) {
+                openTab("sides-links", "tab-contents", "active-link", "active-tab", tabname);
+            }
+            function opentab2(tabname) {
+                openTab("tab-links", "tab-contents2", "active-link2", "active-tab2", tabname);
+            }
+
             function increaseFlexBasis() {
                 var agentCol = event.target.closest('.agent-col');
                 agentCol.style.flexBasis = '300%';
@@ -54,145 +63,184 @@
                     <p>Lineups for Split</p>
 
                     <div class="tab-agents">
-                        <p class="tab-links active-link" onclick="opentab('sage9')">SAGE</p>
-                        <p class="tab-links" onclick="opentab('viper9')">VIPER</p>
-                        <p class="tab-links" onclick="opentab('phoenix9')">PHOENIX</p>
+                        <p class="tab-links active-link2" onclick="opentab2('sage9')">
+                            <img src="images/agents/Sage_icon.webp" alt="">
+                        </p>
+                        <p class="tab-links" onclick="opentab2('viper9')">
+                            <img src="images/agents/Viper_icon.webp" alt="">
+                        </p>
+                        <p class="tab-links" onclick="opentab2('phoenix9')">
+                            <img src="images/agents/Phoenix_icon.webp" alt="">
+                        </p>
                     </div>
 
                     <!--------------------------SAGE------------------------->
-                    <div class="tab-contents active-tab" id="sage9">
-                        <ul>
-                            <li><span>A - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Screens</h3>
-                                    <img src="images/split/sage/sA.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Site</h3>
-                                    <img src="images/split/sage/sA2.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Heaven</h3>
-                                    <img src="images/split/sage/sA3.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>A - Defense</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>A main</h3>
-                                    <img src="images/split/sage/sA4.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Deep A main</h3>
-                                    <img src="images/split/sage/sA5.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>B - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>CT</h3>
-                                    <img src="images/split/sage/sB.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Rafters</h3>
-                                    <img src="images/split/sage/sB2.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>B - Defense</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Deep B main</h3>
-                                    <img src="images/split/sage/sB4.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Shops</h3>
-                                    <img src="images/split/sage/sB3.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                        </ul>
+                    <div class="tab-contents2 active-tab2" id="sage9">
+                        <div class="tab-sides">
+                            <p class="sides-links active-link" onclick="opentab('sageAttack')">ATTACK</p>
+                            <p class="sides-links" onclick="opentab('sageDefense')">DEFENSE</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="sageAttack">
+                            <ul>
+                                <li><span>A - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Screens</h3>
+                                        <img src="images/split/sage/sA.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Site</h3>
+                                        <img src="images/split/sage/sA2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Heaven</h3>
+                                        <img src="images/split/sage/sA3.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>CT</h3>
+                                        <img src="images/split/sage/sB.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Rafters</h3>
+                                        <img src="images/split/sage/sB2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="kjDefense">
+                            <ul>
+                                <li><span>A - Defense</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>A main</h3>
+                                        <img src="images/split/sage/sA4.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Deep A main</h3>
+                                        <img src="images/split/sage/sA5.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Defense</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Deep B main</h3>
+                                        <img src="images/split/sage/sB4.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Shops</h3>
+                                        <img src="images/split/sage/sB3.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!--------------------------VIPER------------------------->
-                    <div class="tab-contents" id="viper9">
-                        <ul>
-                            <li><span>A - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Screens</h3>
-                                    <img src="images/split/viper/vA.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>Site</h3>
-                                    <img src="images/split/viper/vA2.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>B - Attack</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>Safe plant</h3>
-                                    <img src="images/split/viper/vB.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                                <div class="agent-col">
-                                    <h3>One-way smoke</h3>
-                                    <img src="images/split/viper/vB3.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                            <li><span>B - Defense</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>One-way smoke</h3>
-                                    <img src="images/split/viper/vB2.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                        </ul>
+                    <div class="tab-contents2" id="viper9">
+                        <div class="tab-sides">
+                            <p class="sides-links active-link" onclick="opentab('viperAttack')">ATTACK</p>
+                            <p class="sides-links" onclick="opentab('viperDefense')">DEFENSE</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="viperAttack">
+                            <ul>
+                                <li><span>A - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Screens</h3>
+                                        <img src="images/split/viper/vA.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Site</h3>
+                                        <img src="images/split/viper/vA2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Safe plant</h3>
+                                        <img src="images/split/viper/vB.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>One-way smoke</h3>
+                                        <img src="images/split/viper/vB3.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="viperDefense">
+                            <ul>
+                                <li><span>B - Defense</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>One-way smoke</h3>
+                                        <img src="images/split/viper/vB2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!--------------------------PHOENIX------------------------->
-                    <div class="tab-contents" id="phoenix9">
-                        <ul>
-                            <li><span>A - Defense</span>
-                            <div class="agent-row">
-                                <div class="agent-col">
-                                    <h3>A main push - Run throw</h3>
-                                    <img src="images/split/phoenix/pA.png">
-                                    <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
-                                        onmouseout="resetFlexBasis(this)"></button>
-                                </div>
-                            </div></li>
-                        </ul>
-            </div></div></div>
+                    <div class="tab-contents2" id="phoenix9">
+                        <div class="tab-sides">
+                            <p class="sides-links active-link" onclick="opentab('phoAttack')">ATTACK</p>
+                            <p class="sides-links" onclick="opentab('phoDefense')">DEFENSE</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="phoAttack">
+                            <ul></ul>
+                        </div>
+                        <div class="tab-contents" id="phoDefense">
+                            <ul>
+                                <li><span>A - Defense</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>A main push - Run throw</h3>
+                                        <img src="images/split/phoenix/pA.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div></div>
         </section>
 
         <section class="cta">
