@@ -35,8 +35,8 @@ nav img{
     font-size: 62px;
 }
 .text-box p{
-    margin: 10px 0 20px;
-    font-size: 14px;
+    margin: 20px 0 20px;
+    font-size: 16px;
     color: #fff;
 }
 .hero-btn{
@@ -333,6 +333,15 @@ nav img{
 .sub9-header{
     background-image: linear-gradient(rgba(101, 108, 138, 0.7),
     rgba(101, 108, 138, 0.7)), url(images/maps/Split.jpg);
+}
+/*---SUNSET--*/
+.sub11-header{
+    background-image: linear-gradient(rgba(101, 108, 138, 0.7),
+    rgba(101, 108, 138, 0.7)), url(images/maps/Sunset.jpg);
+    min-height: 50vh;
+    background-position: left;
+    background-size: cover;
+    position: relative;
 }
 /*---STRATS--*/
 .sub10-header{

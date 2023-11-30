@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="with=device-width, 
+        <meta name="viewport" content="width=device-width, 
         initial-scale=1.0">
        <title> Lineups!</title>
        <link rel="stylesheet" href="style.css">
@@ -19,6 +19,7 @@
             <h1>Breeze!</h1>
             <p>Use lineups to win games!</p>
             <a href="index.html" class="hero-btn">Go back</a>
+            <p>Do not scrollwheel while hovering a lineup!</p>
         </div>
         </section>
 
@@ -60,14 +61,128 @@
             <div class="row">
                 <div class="about-col-1">
                     <h1 class="sub-title">Breeze</h1>
-                    <p>Lineups for Breeze - TBA</p>
+                    <p>Lineups for Breeze</p>
 
                     <div class="tab-agents">
                         <p class="tab-links active-link2" onclick="opentab2('viper3')">
                             <img src="images/agents/Viper_icon.webp">
                         </p>
+                        <p class="tab-links" onclick="opentab2('sova3')">
+                            <img src="images/agents/Sova_icon.webp">
+                        </p>
                     </div>
+                    
+                    <!--------------------------VIPER------------------------->
                     <div class="tab-contents2 active-tab2" id="viper3">
+                        <div class="tab-sides">
+                            <p class="sides-links active-link" onclick="opentab('viperAttack')">ATTACK</p>
+                            <p class="sides-links" onclick="opentab('viperDefense')">DEFENSE</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="viperAttack">
+                            <ul>
+                                <li><span>A - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Bridge - (Crouch)</h3>
+                                        <img src="images/breeze/viper/vA2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Nest - (Slow walk)</h3>
+                                        <img src="images/breeze/viper/vMid.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>  
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="viperDefense">
+                            <ul>
+                                <li><span>B - Defense</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>A main - (Jump throw)</h3>
+                                        <img src="images/breeze/viper/vA.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--------------------------SOVA------------------------->
+                    <div class="tab-contents2" id="sova3">
+                        <div class="tab-sides">
+                            <p class="sides-links active-link" onclick="opentab('sovaAttack')">ATTACK</p>
+                            <p class="sides-links" onclick="opentab('sovaDefense')">DEFENSE</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="sovaAttack">
+                            <ul>
+                                <li><span>A - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Backsite - 3 bar</h3>
+                                        <img src="images/breeze/sova/sA4.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Attack</span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Backsite - 3 bar</h3>
+                                        <img src="images/breeze/sova/sB2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="sovaDefense">
+                            <ul>
+                                <li><span>A - Defense </span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>A main - 3 bar</h3>
+                                        <img src="images/breeze/sova/sA.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>Pyramid - ShockDart - Front</h3>
+                                        <img src="images/breeze/sova/sA2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Pyramid - ShockDart</h3>
+                                        <img src="images/breeze/sova/sA3.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                                <li><span>B - Defense </span>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>B main - 3 bar - (Crouch)</h3>
+                                        <img src="images/breeze/sova/sB.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                </div></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

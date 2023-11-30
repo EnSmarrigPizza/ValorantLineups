@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="with=device-width, 
+        <meta name="viewport" content="width=device-width, 
         initial-scale=1.0">
        <title> Bind!</title>
        <link rel="stylesheet" href="style.css">
@@ -19,6 +19,7 @@
             <h1>Bind!</h1>
             <p>Use lineups to win games!</p>
             <a href="index.html" class="hero-btn">Go back</a>
+            <p>Do not scrollwheel while hovering a lineup!</p>
         </div>
         </section>
 
@@ -86,7 +87,7 @@
 
                         <div class="tab-contents active-tab" id="brimAttack">
                             <ul>
-                                <li><span>A - Attack - Post plant</span>
+                                <li><span>A - Attack</span>
                                 <div class="agent-row">
                                     <div class="agent-col">
                                         <h3>Default</h3>
@@ -95,8 +96,17 @@
                                             onmouseout="resetFlexBasis(this)"></button>
                                     </div>
                                     <div class="agent-col">
-                                        <h3>Tripplebox</h3>
-                                        <img src="images/bind/brimstone/bA4.png">
+                                        <h3>Default</h3>
+                                        <img src="images/bind/brimstone/bA6.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div> 
+                                </div></li>
+                                <li>
+                                <div class="agent-row">
+                                    <div class="agent-col">
+                                        <h3>Default</h3>
+                                        <img src="images/bind/brimstone/bA7.png">
                                         <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
                                             onmouseout="resetFlexBasis(this)"></button>
                                     </div>
@@ -109,12 +119,24 @@
                                         <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
                                             onmouseout="resetFlexBasis(this)"></button>
                                     </div>
+                                    <div class="agent-col">
+                                        <h3>Tripplebox</h3>
+                                        <img src="images/bind/brimstone/bA4.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
                                 </div></li>
                                 <li><span>B - Attack </span>
                                 <div class="agent-row">
                                     <div class="agent-col">
                                         <h3>Default</h3>
                                         <img src="images/bind/brimstone/bB2.png">
+                                        <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
+                                            onmouseout="resetFlexBasis(this)"></button>
+                                    </div>
+                                    <div class="agent-col">
+                                        <h3>CT</h3>
+                                        <img src="images/bind/brimstone/bB4.png">
                                         <button class="picture-button" onmouseover="increaseFlexBasis(this)" 
                                             onmouseout="resetFlexBasis(this)"></button>
                                     </div>
